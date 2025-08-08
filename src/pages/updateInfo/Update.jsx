@@ -45,7 +45,7 @@ const Update = () => {
       category,
     };
 
-    fetch(`http://localhost:3000/all-foods/${food._id}`, {
+    fetch(`https://chicken-hub-server-side-public.onrender.com/all-foods/${food._id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

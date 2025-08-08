@@ -7,7 +7,7 @@ Welcome to **Chicken Hub**, a modern web application designed to help food enthu
 ## 🚀 Live Website
 
 🔗 **Frontend Live Link:** [Chicken Hub](https://shanto9070-assignment-11-chicken-hub.surge.sh/)  
-🔗 **Server Live Link:** [Chicken Hub(render-server)](http://localhost:3000/all-foods/)
+🔗 **Server Live Link:** [Chicken Hub(render-server)](https://chicken-hub-server-side-public.onrender.com/all-foods/)
 
 ---
 
@@ -48,7 +48,7 @@ Welcome to **Chicken Hub**, a modern web application designed to help food enthu
 | Layer        | Service          | URL                                                                     |
 | ------------ | ---------------- | ----------------------------------------------------------------------- |
 | **Client**   | Vite + Surge     | [Live Frontend](https://shanto9070-assignment-11-chicken-hub.surge.sh/) |
-| **Server**   | Express + Render | [Live Server](http://localhost:3000/)                 |
+| **Server**   | Express + Render | [Live Server](https://chicken-hub-server-side-public.onrender.com/)                 |
 | **Database** | MongoDB Atlas    | Managed by MongoDB                                                      |
 
 ---

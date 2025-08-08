@@ -22,7 +22,7 @@ const MyItems = () => {
     document.title = "Plant-BD | My-Plants";
     if (user?.email) {
       fetch(
-        `http://localhost:3000/my-items?email=${user.email}`
+        `https://chicken-hub-server-side-public.onrender.com/my-items?email=${user.email}`
       )
         .then((res) => res.json())
         .then((data) => {
@@ -55,7 +55,7 @@ const MyItems = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:3000/all-foods/${id}`, {
+        fetch(`https://chicken-hub-server-side-public.onrender.com/all-foods/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

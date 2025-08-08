@@ -37,7 +37,7 @@ export const router = createBrowserRouter([
       {
         path: "/fridge/:id",
         loader: () =>
-          fetch("http://localhost:3000/all-foods"),
+          fetch("https://chicken-hub-server-side-public.onrender.com/all-foods"),
         Component: FridgeDetails,
       },
       {
@@ -59,7 +59,7 @@ export const router = createBrowserRouter([
       {
         path: "/all-foods/:id",
         loader: () =>
-          fetch("http://localhost:3000/all-foods"),
+          fetch("https://chicken-hub-server-side-public.onrender.com/all-foods"),
         element: (
           <PrivetRoute>
             <FoodDetails></FoodDetails>
@@ -70,7 +70,7 @@ export const router = createBrowserRouter([
         path: "/updateInfo/:id",
         loader: ({ params }) =>
           fetch(
-            `http://localhost:3000/all-foods/${params.id}`
+            `https://chicken-hub-server-side-public.onrender.com/all-foods/${params.id}`
           ),
         element: (
           <PrivetRoute>
