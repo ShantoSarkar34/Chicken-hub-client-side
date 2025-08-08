@@ -46,7 +46,7 @@ const AddFood = () => {
       userEmail,
     };
 
-    fetch("https://chicken-hub-server.onrender.com/all-foods", {
+    fetch("http://localhost:3000/all-foods", {
       method: "POST",
       headers: {
         "content-type": "application/json",

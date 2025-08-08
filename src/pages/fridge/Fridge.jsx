@@ -19,7 +19,7 @@ const Fridge = () => {
   useEffect(() => {
     document.title = "Chicken-Hub | Fridge";
     axios
-      .get("https://chicken-hub-server.onrender.com/all-foods")
+      .get("http://localhost:3000/all-foods")
       .then((res) => {
         setData(res.data);
         setLoading(false);

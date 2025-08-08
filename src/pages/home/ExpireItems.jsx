@@ -15,7 +15,7 @@ const ExpireItems = () => {
 
   useEffect(() => {
     axios
-      .get("https://chicken-hub-server.onrender.com/nearly-expired-foods")
+      .get("http://localhost:3000/nearly-expired-foods")
       .then((res) => {
         setData(res.data);
         setLoading(false);
