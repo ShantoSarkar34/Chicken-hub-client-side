@@ -23,6 +23,10 @@ const Update = () => {
     document.title = "Chicken-Hub | UpdateInfo";
   }, [user]);
 
+  console.log(food?.quantity);
+  
+  
+
   const handleUploadFood = (e) => {
     e.preventDefault();
     const form = e.target;

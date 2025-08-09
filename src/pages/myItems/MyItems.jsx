@@ -136,7 +136,7 @@ const MyItems = () => {
               <div>
                 {data.length !== 0 ? (
                   <div  className="overflow-x-auto">
-                    <table className="min-w-full">
+                    <div className="min-w-full">
                     <div className="flex justify-between  border border-gray-300  ">
                       <h3 className="border-r border-gray-300 px-[13px] lg:px-8 p-4  font-medium text-[#292929]">
                         Images
@@ -221,7 +221,7 @@ const MyItems = () => {
                       ))}
                     </div>
 
-                    </table>
+                    </div>
                   </div>
                 ) : (
                   <div className="space-y-4 lg:space-y-5 mt-10 lg:mt-20">

@@ -75,6 +75,18 @@ const Header = () => {
                 {user ? (
                   <>
                     <NavLink
+                      to="/expired-food"
+                      className={({ isActive }) =>
+                        ` text-[14px] jakarta-font font-semibold hover:text-primary border-b pb-1 transition-all duration-200 ${
+                          isActive
+                            ? "text-primary"
+                            : "text-[#0F0F0F80] border-white"
+                        }`
+                      }
+                    >
+                      Expired Food
+                    </NavLink>
+                    <NavLink
                       to="/add-food"
                       className={({ isActive }) =>
                         ` text-[14px] jakarta-font font-semibold hover:text-primary border-b pb-1 transition-all duration-200 ${
@@ -140,6 +152,18 @@ const Header = () => {
               </NavLink>
               {user ? (
                 <>
+                  <NavLink
+                    to="/expired-food"
+                    className={({ isActive }) =>
+                      ` text-[14px] jakarta-font font-semibold hover:text-primary pb-[1px] transition-all duration-100 border-b-2 py-[1px] px-1  ${
+                        isActive
+                          ? "text-primary "
+                          : "text-[#0F0F0F80] border-[#f8fbf3]"
+                      }`
+                    }
+                  >
+                    Expired Food
+                  </NavLink>
                   <NavLink
                     to="/add-food"
                     className={({ isActive }) =>

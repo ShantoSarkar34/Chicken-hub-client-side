@@ -11,6 +11,7 @@ import PrivetRoute from "../authProvider/PrivetRoute";
 import Update from "../pages/updateInfo/Update";
 import FoodDetails from "../pages/foodDetails/FoodDetails";
 import FridgeDetails from "../pages/fridgeDetails/FridgeDetails";
+import ExpiredFood from "../pages/expiredFood/ExpiredFood";
 
 export const router = createBrowserRouter([
   {
@@ -44,7 +45,7 @@ export const router = createBrowserRouter([
         path: "/expired-food",
         element: (
           <PrivetRoute>
-            <AddFood></AddFood>
+            <ExpiredFood></ExpiredFood>
           </PrivetRoute>
         ),
       },

@@ -141,7 +141,7 @@ const AddFood = () => {
                   <input
                     type="email"
                     name="userEmail"
-                    value={user?.email}
+                    value= {user?.email}
                     className="mt-1 bg-[#F8Fbf3] border border-[#999999] rounded-sm focus:outline-none py-2 px-3 w-full text-[#999999] placeholder:text-[#999999]"
                   />
                 </div>
