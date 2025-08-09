@@ -75,7 +75,7 @@ const AddFood = () => {
   return (
     <div>
       {/* add Foods banner section  */}
-      <div className="add_food_banner w-full py-20 lg:py-32 relative">
+      <div className="add_food_banner w-full py-20 lg:py-44 relative">
         <div className="container mx-auto px-4">
           <div className="flex items-center gap-1">
             <NavLink to="/" className="flex items-center gap-1 text-white">
