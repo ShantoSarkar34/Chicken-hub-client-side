@@ -55,9 +55,12 @@ const MyItems = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://chicken-hub-server-side-public.onrender.com/all-foods/${id}`, {
-          method: "DELETE",
-        })
+        fetch(
+          `https://chicken-hub-server-side-public.onrender.com/all-foods/${id}`,
+          {
+            method: "DELETE",
+          }
+        )
           .then((res) => res.json())
           .then((dat) => {
             if (dat.deletedCount) {
@@ -93,7 +96,7 @@ const MyItems = () => {
   return (
     <div>
       {/* My Items banner section  */}
-      <div className="my_items_banner w-full py-20 lg:py-32 relative">
+      <div className="my_items_banner w-full py-20 lg:py-44 relative">
         <div className="container mx-auto px-4">
           <div className="flex items-center gap-1">
             <NavLink to="/" className="flex items-center gap-1 text-white">
@@ -115,10 +118,13 @@ const MyItems = () => {
         </div>
       </div>
       {/* my items data  */}
-      <div className="bg-white w-full py-20">
+      <div className="bg-[#f3f3f3] w-full ">
         <div className="container mx-auto px-4">
           <div className="flex justify-center  ">
             <div className=" w-full lg:w-[50%]">
+              <h1 className="text-center py-20 text-4xl text-primary">
+                My Items{" "}
+              </h1>
               {/* user and data info  */}
               <div className="flex flex-col md:flex-row justify-between md:items-center mb-6 lg:mb-8 border-b border-dotted  pb-6 lg:pb-4 border-gray-200">
                 <p className="text-[#292929] ">
@@ -135,92 +141,91 @@ const MyItems = () => {
               {/* all plants  */}
               <div>
                 {data.length !== 0 ? (
-                  <div  className="overflow-x-auto">
+                  <div className="overflow-x-auto">
                     <div className="min-w-full">
-                    <div className="flex justify-between  border border-gray-300  ">
-                      <h3 className="border-r border-gray-300 px-[13px] lg:px-8 p-4  font-medium text-[#292929]">
-                        Images
-                      </h3>
-                      <h3 className="p-4  font-medium text-[#292929]">
-                        Details
-                      </h3>
-                      <h3 className="border-l border-gray-300 px-[27px] lg:px-[42px]  p-4  font-medium text-[#292929]">
-                        Button
-                      </h3>
-                    </div>
-                    <div className="-mt-[1px] space-y-[-1px]">
-                      {data?.map((food) => (
-                        <div
-                          key={food._id}
-                          className="flex w-full border border-gray-300"
-                        >
-                          <div className="bg-white shadow-sm rounded-md m-2 lg:m-4 p-2 lg:p-4">
-                            <img
-                              src={food.foodPhoto}
-                              alt="food_img"
-                              className="w-16 h-14 object-cover rounded-sm"
-                            />
-                          </div>
-                          <div className="flex w-full justify-between border-l border-gray-300 ">
-                            <div className="p-3 relative w-full">
-                              <h2 className="text-primary font-medium text-[13px] lg:text-[20px]">
-                                {food.foodName}
-                              </h2>
-                              <h3 className="text-[#707070] text-[11px] lg:text-[16px]">
-                                Category :{" "}
-                                <span className="text-[#292929]">
-                                  {" "}
-                                  {food.category}
-                                </span>
-                              </h3>
-                              <h3 className="text-[#707070] text-[11px] lg:text-[16px]">
-                                Quantity :{" "}
-                                <span className="text-[#292929]">
-                                  {" "}
-                                  {food.quantity}
-                                </span>
-                              </h3>
-                              <h3 className="text-[#707070] text-[11px] lg:text-[16px]">
-                                Upload Date :{" "}
-                                <span className="text-[#292929]">
-                                  {" "}
-                                  {food.currentDate}
-                                </span>
-                              </h3>
-                              {food.expireDate < currentDate ? (
-                                <>
-                                  <div className="bg-white border  rounded-full text-secondary px-2 text-[10px]  lg:text-sm  py-1 lg:px-3 absolute  top-1 lg:top-2 right-1 lg:right-2">
-                                    Expired
-                                  </div>
-                                </>
-                              ) : (
-                                <></>
-                              )}
+                      <div className="flex justify-between  border border-gray-300  ">
+                        <h3 className="border-r border-gray-300 px-[13px] lg:px-8 p-4  font-medium text-[#292929]">
+                          Images
+                        </h3>
+                        <h3 className="p-4  font-medium text-[#292929]">
+                          Details
+                        </h3>
+                        <h3 className="border-l border-gray-300 px-[27px] lg:px-[42px]  p-4  font-medium text-[#292929]">
+                          Button
+                        </h3>
+                      </div>
+                      <div className="-mt-[1px] space-y-[-1px]">
+                        {data?.map((food) => (
+                          <div
+                            key={food._id}
+                            className="flex w-full border border-gray-300"
+                          >
+                            <div className="bg-white shadow-sm rounded-md m-2 lg:m-4 p-2 lg:p-4">
+                              <img
+                                src={food.foodPhoto}
+                                alt="food_img"
+                                className="w-16 h-14 object-cover rounded-sm"
+                              />
                             </div>
-                            {/* button are here  */}
-                            <div className="border-l border-gray-300">
-                              <div className="flex flex-col gap-2 lg:gap-4 items-center p-2 lg:p-4">
-                                <button
-                                  onClick={() => updateBtn(food._id)}
-                                  className="cursor-pointer border-none shadow-none bg-[#29292995] btn text-[12px] lg:text-[14px]"
-                                >
-                                  <FaPenToSquare className="text-[10px] lg:text-[17px] " />
-                                  Update
-                                </button>
-                                <button
-                                  onClick={() => handleDelete(food._id)}
-                                  className=" btn-primary border-none shadow-none cursor-pointer  btn text-[12px] lg:text-[14px]"
-                                >
-                                  <LuDelete className="text-[14px] lg:text-[22px]" />
-                                  Delete
-                                </button>
+                            <div className="flex w-full justify-between border-l border-gray-300 ">
+                              <div className="p-3 relative w-full">
+                                <h2 className="text-primary font-medium text-[13px] lg:text-[20px]">
+                                  {food.foodName}
+                                </h2>
+                                <h3 className="text-[#707070] text-[11px] lg:text-[16px]">
+                                  Category :{" "}
+                                  <span className="text-[#292929]">
+                                    {" "}
+                                    {food.category}
+                                  </span>
+                                </h3>
+                                <h3 className="text-[#707070] text-[11px] lg:text-[16px]">
+                                  Quantity :{" "}
+                                  <span className="text-[#292929]">
+                                    {" "}
+                                    {food.quantity}
+                                  </span>
+                                </h3>
+                                <h3 className="text-[#707070] text-[11px] lg:text-[16px]">
+                                  Upload Date :{" "}
+                                  <span className="text-[#292929]">
+                                    {" "}
+                                    {food.currentDate}
+                                  </span>
+                                </h3>
+                                {food.expireDate < currentDate ? (
+                                  <>
+                                    <div className="bg-white border  rounded-full text-secondary px-2 text-[10px]  lg:text-sm  py-1 lg:px-3 absolute  top-1 lg:top-2 right-1 lg:right-2">
+                                      Expired
+                                    </div>
+                                  </>
+                                ) : (
+                                  <></>
+                                )}
+                              </div>
+                              {/* button are here  */}
+                              <div className="border-l border-gray-300">
+                                <div className="flex flex-col gap-2 lg:gap-4 items-center p-2 lg:p-4">
+                                  <button
+                                    onClick={() => updateBtn(food._id)}
+                                    className="cursor-pointer border-none shadow-none bg-[#29292995] btn text-[12px] lg:text-[14px]"
+                                  >
+                                    <FaPenToSquare className="text-[10px] lg:text-[17px] " />
+                                    Update
+                                  </button>
+                                  <button
+                                    onClick={() => handleDelete(food._id)}
+                                    className=" btn-primary border-none shadow-none cursor-pointer  btn text-[12px] lg:text-[14px]"
+                                  >
+                                    <LuDelete className="text-[14px] lg:text-[22px]" />
+                                    Delete
+                                  </button>
+                                </div>
                               </div>
                             </div>
                           </div>
-                        </div>
-                      ))}
-                    </div>
-
+                        ))}
+                      </div>
                     </div>
                   </div>
                 ) : (

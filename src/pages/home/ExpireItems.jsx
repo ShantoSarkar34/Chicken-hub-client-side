@@ -36,7 +36,7 @@ const ExpireItems = () => {
   // Countdown renderer
   const renderer = ({ days, hours, minutes, seconds }) => {
     return (
-      <p className="text-gray-600 font-medium">
+      <p className="text-gray-600 font-medium pr-2">
         ⏳ Expire after :{" "}
         <span className="text-primary">
           {" "}
