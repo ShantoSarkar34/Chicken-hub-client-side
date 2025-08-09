@@ -37,10 +37,6 @@ const ExpiredFood = () => {
       </div>
     );
   }
-
-  const handleSearchChange = (e) => {
-    setCategory(e.target.value);
-  };
   const handleCategoryChange = (e) => {
     setCategory(e.target.value);
   };
@@ -58,7 +54,7 @@ const ExpiredFood = () => {
   return (
     <div>
       {/* Fridge banner section  */}
-      <div className="my_items_banner w-full py-20 lg:py-32 relative">
+      <div className="my_items_banner w-full py-20 lg:py-44 relative">
         <div className="container mx-auto px-4">
           <div className="flex items-center gap-1">
             <NavLink to="/" className="flex items-center gap-1 text-white">
@@ -79,9 +75,7 @@ const ExpiredFood = () => {
           </div>
         </div>
       </div>
-
       {/* Fridge section  */}
-
       <div className="bg-white py-20 w-full">
         <div className="container mx-auto px-4">
           <h1 className=" uppercase text-center text-primary font-semibold text-lg lg:text-2xl mb-2">
