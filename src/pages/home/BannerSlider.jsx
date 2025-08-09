@@ -49,7 +49,7 @@ const BannerSlider = () => {
   const currentBg = slides[activeSlide]?.image;
   return (
     <div
-      className="banner w-full py-10 lg:py-14 relative overflow-hidden transition-all duration-500"
+      className="banner w-full  relative overflow-hidden transition-all duration-500"
       style={{
         backgroundImage: `linear-gradient(to bottom, #29292995, #29292980), url(${currentBg})`,
       }}
@@ -57,11 +57,11 @@ const BannerSlider = () => {
       <Slider {...settings}>
         {slides.map((item, index) => (
           <div key={index}>
-            <div className="container mx-auto px-4">
-              <div className="w-full">
+            <div className="container mx-auto min-h-screen px-4  flex items-center relative">
+              <div className="w-full ">
                 {/* Banner text */}
                 <div className="text-center">
-                  <div className="flex mb-4 lg:mb-0">
+                  <div className="flex absolute top-20">
                     <p className="border text-[#FCB819] py-1 px-4 rounded-full uppercase text-[9px] lg:text-sm">
                       Best Quality Foods
                     </p>

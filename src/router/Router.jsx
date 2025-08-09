@@ -41,6 +41,14 @@ export const router = createBrowserRouter([
         Component: FridgeDetails,
       },
       {
+        path: "/expired-food",
+        element: (
+          <PrivetRoute>
+            <AddFood></AddFood>
+          </PrivetRoute>
+        ),
+      },
+      {
         path: "/add-food",
         element: (
           <PrivetRoute>
